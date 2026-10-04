@@ -1,0 +1,11 @@
+APK R2 stability-first patch
+- Base: last pre-R1 Android source that was reported to open and complete Gemini long-audio transcription on device.
+- Windows: untouched.
+- Removed R1 startup-time Handler/Looper heartbeat design.
+- Added post-layout heartbeat only while a job is actually running.
+- Added collapsible API-key panel.
+- Added progress stage / elapsed / liveness text.
+- Added scrollable transcript preview and top/bottom navigation.
+- Added timestamp-order normalization for timestamped blocks.
+- Added date/time session folder saving with unchanged original audio filename.
+- Added Robolectric MainActivity startup smoke test to CI.

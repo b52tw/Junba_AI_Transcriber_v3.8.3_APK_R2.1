@@ -1,0 +1,20 @@
+Android third-party components
+==============================
+
+1. whisper-android
+   Artifact: dev.ffmpegkit-maintained:whisper-android:1.0.0
+   Purpose: on-device whisper.cpp transcription.
+   Audio: WAV / MP3 / FLAC are decoded and resampled internally by the library.
+   License: see the upstream artifact / bundled notices.
+
+2. Kotlin coroutines
+   Artifact: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0
+   Purpose: background execution around the local Whisper API.
+
+3. Android platform MediaExtractor / MediaCodec
+   Purpose: local conversion of common compressed Android audio containers such as
+   M4A / AAC / OGG / Opus / MP4 to PCM WAV when needed by the Whisper path.
+
+No separate FFmpegKit audio artifact is packaged in this build.
+This intentionally avoids duplicate native C++ runtimes and the previous
+FFmpegKitConfig runtime class-loading failure.
